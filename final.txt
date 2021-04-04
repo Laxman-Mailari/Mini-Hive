@@ -1,0 +1,10 @@
+user_id:INT,recipe_id:INT,rating:INT,#u:INT,#i:INT
+
+
+SELECT user_id FROM /sql_engine/interactions_test.csv  WHERE rating = 4
+
+SELECT MAX(rating) FROM /sql_engine/interactions_test.csv
+
+SELECT COUNT(user_id) FROM /sql_engine/interactions_test.csv
+
+

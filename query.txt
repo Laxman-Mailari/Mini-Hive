@@ -1,0 +1,42 @@
+the cars dataset column names
+
+Car;MPG;Cylinders;Displacement;Horsepower;Weight;Acceleration;Model;Origin
+
+STRING	DOUBLE	INT	DOUBLE	DOUBLE	DOUBLE	DOUBLE	INT	CAT
+
+
+ LOAD database/cars.csv AS
+(Cars:STRING,MPG:DOUBLE,Cylinders:INT,Displacement:DOUBLE,Horsepower:DOUBLE,Weight:DOUBLE,Acceleration:DOUBLE,Model:INT,Origin:CHAR) 
+
+
+
+
+Query list:
+
+LOAD /sql_engine/cars.csv AS (Cars:STRING,MPG:DOUBLE,Cylinders:INT,Displacement:DOUBLE,Horsepower:DOUBLE,Weight:DOUBLE,Acceleration:DOUBLE,Model:INT,Origin:CHAR)
+
+SELECT Cars FROM /sql_engine/cars.csv WHERE Displacement = 400
+
+SELECT Cars FROM /sql_engine/cars.csv WHERE Displacement <= 400
+
+SELECT Cars FROM /sql_engine/cars.csv WHERE Displacement >= 400
+
+SELECT Cars FROM /sql_engine/cars.csv WHERE Accelaration >= 14.5
+
+SELECT MIN(Displacement) FROM /sql_engine/cars.csv
+
+SELECT MAX(Displacement) FROM /sql_engine/cars.csv
+
+SELECT COUNT(Displacement) FROM /sql_engine/cars.csv WHERE Displacement = 302
+
+
+
+SELECT COUNT(Cars) FROM /sql_engine/cars.csv WHERE Displacement = 400
+
+SELECT COUNT(Cars) FROM /sql_engine/cars.csv WHERE Displacement <= 400
+
+SELECT COUNT(Cars) FROM /sql_engine/cars.csv WHERE Displacement >= 400
+
+SELECT Cars FROM /sql_engine/cars.csv WHERE Displacement <= 100
+
+SELECT 
